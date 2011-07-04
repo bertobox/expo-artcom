@@ -1,0 +1,60 @@
+body{margin: 0;padding: 0;}
+h1{font-family: "DekarLightRegular", Verdana, Arial, Helvetica, sans-serif;font-size: 20px;font-weight: normal;line-height: 1;margin:0;}
+h2{font-family: "Calibri",Verdana, Arial, Helvetica, sans-serif;font-weight: normal;margin:0;font-size: 1.2em;}
+dt{font-family: "m1cregular",Verdana, Arial, Helvetica, sans-serif;text-transform: uppercase;font-size: 10px;color: #B6B6B6;margin: 1em 0 .2em;}
+dd{font-family: "m1cregular",Verdana, Arial, Helvetica, sans-serif;margin: 0;font-size: 13px;}
+.obra{margin-top: 20px;margin-bottom: 20px;width: 320px;}
+.socialnetworks{background-color: #303942;color: #B3D6DB;width: 49px;height: 21px;text-align: center;}
+h1 .year{font-family: "DekarRegular",sans-serif;font-size: .8em;letter-spacing: .1em;}
+.vimeo{width: 100%;}
+footer p{font-family: "m1cregular",Verdana, Arial, Helvetica, sans-serif;margin: 0;font-size: 11px;}
+
+
+/* Small screen! */
+@media screen and (max-device-width: 480px),
+screen and (max-width: 600px) {
+	/* iOS and Windows Mobile font-size changes make the robot cry and SMASH */
+	html{-ms-text-size-adjust:none;-webkit-text-size-adjust:none;}
+	#container{padding: 0 10px;}
+	h1{margin: 0;}
+	.gallery-media{margin: 0 auto;width: 100%;}
+	.gallery-media img{width: 100%;}
+}
+/* ¡Aún pequeño! (pero un poquito más grande) */
+@media screen and (min-width: 600px) {
+	#container{padding: 0 10px;}
+	.obra{width: 100%;}
+	.gallery-media{margin: 0 auto;width: 100%;}
+	.gallery-media img{width: 100%;}
+	.gallery-media iframe{width: 100%;}
+	/*dd{display: inline;}
+		dd:after{content:", ";}
+		dl:nth-last-child{content:"";}*/
+}
+/* Desktop! */
+@media screen and (min-width: 740px) {
+	#container{margin: 0 auto;width: 720px;}
+	#main{padding: 0;}
+	.obra{}
+	.gallery-media, .vimeo{width: 720px;}
+	.socialnetworks{/*position: fixed;top:230px;*/}
+	/*dl{margin: 0;}
+		dd{display: block;}
+		dd:after{content:"";}*/
+}
+
+@media screen and (min-width: 1090px) {
+	#container{position: relative;margin: 0 auto;width: 1050px;}
+	#main{padding: 0 ;}
+	.obra{position: fixed;top:22px;width: 320px;}
+	.gallery-media{margin: 0 0 0 330px;width: 720px;}
+	.socialnetworks{position: fixed;top:230px;}
+	iframe{}
+/*dd{display: block;}
+	dd:after{content:"";}*/
+}
+
+/* IT'S OVER 9000 */
+@media screen and (min-width: 1200px) {
+
+}

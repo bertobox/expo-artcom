@@ -1,0 +1,70 @@
+@import url('../webfonts/stylesheet.css');
+
+/* Primary Styles
+    Author: Robert Valencia
+*/
+
+@media screen and (orientation:portrait) { 
+ 	html,body{
+	margin:0;
+	padding:0;
+	height:100%;
+	border:none;
+	font-size: 16px;
+	font-size: 100%;
+	letter-spacing: .1em;
+	}
+	.column{float: left;}
+
+	.clr{clear: both;}
+	.tag{width: 3.75in;/*19.125em · 306px · 4.25in */clear: both;position:relative;padding:.5in .25in .5in .25in ;/*background-color: lightgreen;*/}
+	.tag .left{float: left;width: .84in;/*background-color: pink;*/}
+	.folio{font-family:"m1cblack", Arial, sans-serif;font-size: 27pt;line-height: 1;margin: 0;letter-spacing: 0;}
+	.qr table{display: block;margin-top: 20.6pt;}
+	/*.qr{width: 20px;}*/
+	.qr img{width: .84in;display: block;margin-top: 20.6pt;}
+
+	.tag .right{float: left;width: 2.91in;/*12.1875em · 195px · 2.7in */ text-align: right;/*background-color: orange;*/}
+	.autores{font-family: "m1cthin", Arial, sans-serif;text-transform: uppercase;font-size: 9pt;line-height: 13pt;margin: 0;height: 38pt;}
+	.autores:before{content:url(images/tags-bowtie.svg)" ";}
+	.name{font-family: "DekarRegular", Arial, sans-serif;font-size: 16.5pt;line-height: 20pt;margin:8pt 0 0;height: 39pt;}
+	.materia{font-family: "m1cregular", Arial, sans-serif;text-transform: uppercase;font-size: 9pt;margin:5pt 0 0;line-height: 20pt;color:#666;}
+	.specs{font-family:"m1cheavy", Arial, sans-serif;font-size: 9pt;line-height: 20pt;margin: 0;}
+	.tecnica{font-family:"m1clight", Arial, sans-serif;}
+	.especificaciones{} 
+}
+
+@media print {
+  * { background: transparent !important; color: #444 !important; text-shadow: none !important; }
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a:after { content: " (" attr(href) ")"; } 
+  abbr:after { content: " (" attr(title) ")"; }
+  .ir a:after { content: ""; }  
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }  
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+	/*my styles*/
+	@page {size: letter portrait;/* width height */	margin: 0in;}
+	body{background-color: #DDD;}
+	.column{float: left;}
+	.break{color: red;page-break-after:always;}
+	.clr{clear: both;}
+	.tag{width: 3.75in;/*19.125em · 306px · 4.25in */padding:.25in .25in .25in 0;/*float: left;*/margin: 0;page-break-after:always;}
+	.tag .left{float: left;width: .84in;background-color: pink;}
+	.folio{font-family: "mplus-1c-black", "m1cblack", Arial, sans-serif;font-size: 27pt;line-height: 1;margin: 0;letter-spacing: 0;}
+	.qr table{display: block;margin-top: 20.6pt;border-width: 0px; border-style: none; border-color: #0000ff; border-collapse: collapse;}
+	.qr td{border-width: 0px; border-style: none; border-color: #0000ff; border-collapse: collapse; padding: 0; margin: 0; width: 2px; height: 2px; background-color: #ffffff;}
+	.qr img{width: .84in;display: block;margin-top: 20.6pt;}
+			
+	.tag .right{float: left;width: 2.91in;/*12.1875em · 195px · 2.7in */ text-align: right;background-color: orange;}
+	.autores{font-family: "mplus-1c-thin", "m1cthin", Arial, sans-serif;text-transform: uppercase;font-size: 9pt;line-height: 13pt;margin: 0;height: 38pt;}
+	.autores:before{content:url(images/tags-bowtie.svg)" ";}
+	.name{font-family: "Dekar", "DekarRegular", Arial, sans-serif;font-size: 16.5pt;line-height: 20pt;margin:8pt 0 0;height: 39pt;}
+	.materia{font-family: "mplus-1c-regular", "m1cregular", Arial, sans-serif;text-transform: uppercase;font-size: 9pt;margin:5pt 0 0;line-height: 20pt;color:#666;}
+	.specs{font-family: "mplus-1c-heavy", "m1cheavy", Arial, sans-serif;font-size: 9pt;line-height: 20pt;margin: 0;}
+	.tecnica{font-family: "mplus-1c-light", "m1clight", Arial, sans-serif;}
+	.especificaciones{}
+}
