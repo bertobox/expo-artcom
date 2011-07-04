@@ -14,8 +14,8 @@ if ($file["size"] < 10240000){
 		$newName = md5($file["name"].microtime()).'.'.$chunks[count($chunks)-1];
 		move_uploaded_file($file["tmp_name"], "./upload/" . $newName);
 		
-		mysql_connect("internal-db.s56558.gridserver.com","db56558","TWDsxCH5");
-		mysql_select_db("db56558_expo_artcom");
+		//mysql_connect("internal-db.s56558.gridserver.com","db56558","TWDsxCH5");
+		//mysql_select_db("db56558_expo_artcom");
 		
 		$query = "insert into `archivo` (original,nuevo,pre_obra_id) values (\"".$file['name']."\",\"".$newName."\",".mysql_real_escape_string($_POST['tmp_id']).")";
 		mysql_query($query);
