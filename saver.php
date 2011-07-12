@@ -1,6 +1,6 @@
 <?php
-mysql_connect("internal-db.s56558.gridserver.com","db56558","TWDsxCH5");
-mysql_select_db("db56558_expo_artcom");
+mysql_connect("","","");
+mysql_select_db("");
 mysql_set_charset('utf8'); 
 if($_POST['tmp_id']){
 	

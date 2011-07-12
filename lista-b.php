@@ -43,8 +43,8 @@
 			</thead>
 			<tbody>
 <?php
-				mysql_connect("internal-db.s56558.gridserver.com","db56558","TWDsxCH5");
-				mysql_select_db("db56558_expo_artcom");
+        mysql_connect("","","");
+        mysql_select_db("");
 
 				$obras = mysql_query("select O.id,titulo,date,tecnica,T.name,specs,M.profesor,M.name as materiaNombre,M.grupo1 as quihubo,C.nombre as coleccionNombre from `obra` as O inner join `materia` as M on M.id = materia_id inner join `coleccion` as C on C.id = coleccion_id inner join `clasificacion` as T on T.id = tecnica where coleccion_id!=0");
 				

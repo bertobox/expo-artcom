@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 
 <?php
-mysql_connect("internal-db.s56558.gridserver.com","db56558","TWDsxCH5");
-mysql_select_db("db56558_expo_artcom");
+mysql_connect("","","");
+mysql_select_db("");
 
 mysql_query("insert into `pre_obra` (titulo,tecnica,specs,materia_id,semestre,coleccion_id,date) values (0,0,0,0,0,0,now())");
 $tmp_id = mysql_insert_id();
