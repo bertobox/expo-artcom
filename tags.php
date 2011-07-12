@@ -1,43 +1,13 @@
 <!DOCTYPE html>
 <head>
 	<meta charset="utf-8"/>
-
 	<title>Expo ARTCOM primavera 2011 · etiquetas para exhibición</title>
 	<script type="text/javascript" src="js/qrcode.js"></script>
 	<script type="text/javascript" src="js/qrcanvas.js"></script>
 	<link rel="shortcut icon" href="images/favicon-2011.png" type="image/png">
 	<link rel="stylesheet" href="webfonts/stylesheet.css">
+  <link rel="stylesheet" href="css/expo-tags.css" media="screen,print">
 	<!-- <link rel="stylesheet" href="css/tags.css"> -->
-<style type="text/css" media="screen,print">
-	html,body{margin:0;padding:0;height:100%;border:none;font-size:16px;font-size:100%;letter-spacing:.1em;}
-	@page {size: letter portrait;margin: 0in;padding:0in}
-  .page{padding-top:0;width:8.5in;height:11in;-webkit-page-break-before:always;-moz-page-break-before:always;page-break-before:always;}
-	.page:first{display:none;}
-	.tl{border:0px solid black;border-width:0px 0px 0px 0px;position:absolute;top:0px;left:0px;height:15pt;width:15pt;}
-	.tr{border:0.25pt solid #cbcbcb;border-width:0px 1px 0px 0px;position:absolute;top:0px;right:0px;height:15pt;width:15pt;}
-	.bl{border:0.25pt solid #cbcbcb;border-width:0px 0px 1px 0px;position:absolute;bottom:0px;left:0px;height:15pt;width:15pt;}
-	.br{border:0.25pt solid #cbcbcb;border-width:0px 1px 1px 0px;position:absolute;bottom:0px;right:0px;height:15pt;width:15pt;}
-	.column{width:4.25in;padding:0px;margin:0px;float:left;}
-	.clr{clear: both;}
-	.break{-webkit-page-break-before:always;
-	    -moz-page-break-before:always;
-	    page-break-before:always;}
-	.tag{position:relative;width: 3.75in;/*19.125em · 306px · 4.25in */padding:.25in .25in .0in .25in ;/*background-color: lightgreen;*/}
-	.tag .left{float: left;width: .84in;/*background-color: pink;*/}
-	.folio{font-family:"m1cblack", Arial, sans-serif;font-size: 27pt;line-height: 1;margin: 0;letter-spacing: 0;}
-	.qr table{display: block;margin-top: 20.6pt;}
-	/*.qr{width: 20px;}*/
-	.qr img{width: .84in;margin-top: 20.6pt;}
-	.qr{width: .84in;display: block;margin-top: 20.6pt;}
-	.tag .right{width: 100%;/*12.1875em · 195px · 2.7in */ text-align: right;/*background-color: orange;*/}
-	.autores{font-family: "m1cthin", Arial, sans-serif;text-transform: uppercase;font-size: 9pt;line-height: 13pt;margin: 0;height: 38pt;}
-	.autores:before{content:url(images/tags-bowtie.svg)" ";}
-	.name{font-family: "DekarRegular", Arial, sans-serif;font-size: 16.5pt;line-height: 20pt;margin:8pt 0 0;height: 39pt;}
-	.materia{font-family: "m1cregular", Arial, sans-serif;text-transform: uppercase;font-size: 9pt;margin:5pt 0 0;line-height: 20pt;color:#666;}
-	.specs{font-family:"m1cheavy", Arial, sans-serif;font-size: 9pt;line-height: 20pt;margin: 0;height:59pt;}
-	.tecnica{font-family:"m1clight", Arial, sans-serif;}
-	.especificaciones{}
-</style>
 </head>
 <body>
 	

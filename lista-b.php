@@ -3,18 +3,10 @@
   <meta charset="utf-8">
 	<title>Lista de participantes en la EXPO ARTCOM · primavera 2011</title>
 	<link rel="stylesheet" href="webfonts/stylesheet.css">
+  <link rel="stylesheet" href="css/expo-lista.css">
 	<link rel="shortcut icon" href="images/favicon-2011.png" type="image/png">
 	<script src="js/jquery.min.js"></script>
     <script src="js/application.js"></script>
-<style type="text/css" media="screen">
-	h1{font-size: 22px;font-family: "M1clight",Arial, Helvetica, sans-serif;font-weight: normal;}
-	th{font-size: .76em;font-family: "M1cmedium",Arial, Helvetica, sans-serif;text-transform: uppercase;font-weight: normal;border-bottom: 1px solid #999;}
-	td{font-size: .67em;font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;font-weight: normal;padding-right: 1em;}	
-	fieldset{}
-	#search{margin:1em;padding:1em;-webkit-border-radius:11px;-moz-border-radius:11px;border-radius:11px;background-color:#D5D5D5;width:50em;}
-	#search label{font-size: 1em;font-family: "M1cmedium",Arial, Helvetica, sans-serif;font-weight: normal;}
-	input[type=text]{width:35em;font-size:1.3em;}
-</style>
 
 </head>
 
