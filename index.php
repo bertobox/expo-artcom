@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 
 <?php
+include 'config.php';
 mysql_connect("","","");
 mysql_select_db("");
 
