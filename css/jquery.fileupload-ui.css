@@ -61,12 +61,21 @@
 }
 
 .file_upload_progress .ui-progressbar-value {
-  background: url(pbar-ani.gif);
+/*  background: url(images/pbar-ani.gif);*/
+rgb(0,255,0);height: 15px;
+/**
+* new properties by bertobox
+*/
+
 }
 
 .file_upload_progress div {
   width: 150px;
   height: 15px;
+  /**
+  *new properties by bertobox
+  */
+  background-color: rgba(220,220,220,0.5);margin: 1em 0;
 }
 
 .file_upload_cancel button {

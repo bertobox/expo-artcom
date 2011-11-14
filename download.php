@@ -19,7 +19,7 @@ define('ALLOWED_REFERRER', '');
 
 // Download folder, i.e. folder where you keep all files for download.
 // MUST end with slash (i.e. "/" )
-define('BASE_DIR','expo/upload;media/;files/;');
+define('BASE_DIR','upload/;');
 
 // log downloads?  true/false
 define('LOG_DOWNLOADS',true);

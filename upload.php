@@ -3,7 +3,7 @@ $file = $_FILES['file'];
 if ($file["size"] < 10240000){
   
 	if ($file["error"] > 0){
-    echo "Return Code: " . $file["error"] . "<br />";
+    echo "{\"error\":" . $file["error"] . "}";
 		return;
   }
 
@@ -14,8 +14,11 @@ if ($file["size"] < 10240000){
 		$newName = md5($file["name"].microtime()).'.'.$chunks[count($chunks)-1];
 		move_uploaded_file($file["tmp_name"], "./upload/" . $newName);
 		
-    mysql_connect("","","");
-    mysql_select_db("");
+    include("dbconfig.php");
+    include("config_loader.php");
+
+    mysql_connect($config['host'],$config['user'],$config['pass']);
+    mysql_select_db($config['db']);
 		
 		$query = "insert into `archivo` (original,nuevo,pre_obra_id) values (\"".$file['name']."\",\"".$newName."\",".mysql_real_escape_string($_POST['tmp_id']).")";
 		mysql_query($query);

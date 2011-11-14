@@ -399,8 +399,8 @@ div.selector {
 
 div.selector select {
   min-width: 190px;
-  font-family: "HelveticaNeue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+  font-size: 14px;
   border: solid 1px #fff;
 }
 

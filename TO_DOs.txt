@@ -1,39 +1,63 @@
-<!--
 
-  DONE  CSS     TAGS      Print CSS template for outputting the OBRA tags. Currently NOT applying page-break-after:always; when elements are floated
-  DONE  PHP     TAGS      $autores needs to print as a comma separated array and with a 'y' separator for the last author’s name
-  TODO  ?       TAGS      implement mechanism that [can be toggled on/off] to auto-detect when 8 [or any given number of] new pieces have been added thus setting up those pages ready to print, or creating a pdf and downloading it. [This could be further combined with a Automator watched folder that detects when new PDFs have been added and proceeds to send them to print and then moves them to another folder.]
-  DONE  JS      TAGS      update TAGS.php to use the Canvas QR code generator as used in tags.html  
-  
-  DONE  design  LIST      Create GALLERY LIST output template for printing & downloading the files for the print based EXPO newspaper
-  DONE  code    LIST      CODE Apply Downloader with rename; //Sample call (browser will try to save with new file name): (download.php?f=phptutorial.zip&fc=php123tutorial.zip) There is a slight situation here, where the file needs to be renamed yet maintain the file extension. Never mind, this has been done and the download re-added te extension at the end.
-
-  TODO  code    HTACCESS  Create modRewrites to create the URL pretty links for QR codes and Facebook likes {*ala* `expo/gallery#01` *perhaps*}
-  TODO  code    FORM      Add cookie to submission form to 'remember' previous selections
-  TODO  code    FORM      The CLASIFICACIÓN list should only show the available list items that a specific MATERIA might allow. In fact if it can remain hidden until a MATERIA has been selected, all the better. We need to build this functionality.
-  TODO  code    FORM      Allow user to include links to videos uploaded on Vimeo or YouTube
-  TODO  doc.    FORM      create some good documentation with “best practices” tips on what kind of files to upload, titles to write, specs to include.
-  TODO  code    FORM      Add project description field, perhaps it can replace the comments
-  1/2   code    FORM      Add possibility for a brief project description and/or file {image/video/mp3} captions
-  DONE  code    Database  If user uploads files but doesn’t fill out form, then delete unlinked files (DONE Notes: This has been attached to check for ‘empty obras’ and possibly can be set as a Cron job for deleting every three days)
-  DONE  code    Database  Fix database so we can clean out empty obras {return ARCHIVO ID, send ARCHIVO array}
-* TODO  code    UPLOADS   Create GALLERY-friendly versions of uploads. Add image resizing function '278px' for iPhone 3Gs version [320px width minus 20px margin minus 1px border = 278px], '598px' for iPhone4, and '920px' for larger screens.
-
-  TODO  code    GALLERY   or UPLOAD interpret YOUTUBE or VIMEO URLS and/or EMBED code and switch it to iframe embed code
-  1/2   code    GALLERY   Automatically detect screen width resizing and adjust the videos’ width or run the script automatically.
-  TODO  code    GALLERY   create a declaration which specifies which documents to display in gallery [images, video & audio], which to omit [native files, ie. Adobe, MS Office, Apple, TXT, RTF], which to include as a link for viewing [like in an issuu.com player, ie. PDF, PPT, DOC] & which to include as a link for downloading.
-  TODO  code    GALLERY   implement MP3/HTML5video players with Flash fallback
-  TODO  design  GALLERY   create some sample projects: audio, text, powerpoint, illustration, design
-  TODO  code    GALLERY   Add Facebook Like /Twitter Tweet buttons
-  TODO  code    GALLERY   Add loading masks for Carousel DIVs that might still be loading
-  TODO  code    GALLERY   Add finger swiping (for touch devices) and left/right arrow keyboard navigation to advance carousel
-  TODO  design  GALLERY   Create nice UI & instructions/legend for finger gesture (swiping) and/or keyboard control
-  TODO  code    GALLERY   Add a parameters page on the gallery [perhaps an initial page] where a user can select to view a specific collection of OBRAS by COLECCIÓN, MATERIA or ARTIST
-  TODO  code    FORM      Enable/disable the save button depending on the status of the uploads
-  DONE  design  GALLERY   create a flexible layout for the gallery using <img src="http://placehold.it/10x10" width="10" height="10" alt="" /> and ethanmarcotte’s <meta name="viewport" content="width=device-width, initial-scale=1.0" /> and device-width-adjustable stylesheet 
-  TODO  code    GALLERY   create an option that will allow the user to select various ‘gallery item width’ sizes, such as S, M, L (360px, 720px, 920px) for example, and save a cookie for that setting, regardless of URL schema and lightbox functionality
-  TODO  C&D     GALLERY   create an HD gallery option, that only shows up for certain pieces, where the experience has been customized especially for that size (1920 x 1080)
+<!-- TAGS.PHP
+************************************ 
+CHANGED  CSS     TAGS      Print CSS template for outputting the OBRA tags. Currently NOT applying page-break-after:always; when elements are floated
+CHANGED  PHP     TAGS      $autores needs to print as a comma separated array and with a 'y' separator for the last author’s name
+TODO     ?       TAGS      implement mechanism that [can be toggled on/off] to auto-detect when 8 [or any given number of] new pieces have been added thus setting up those pages ready to print, or creating a pdf and downloading it. [This could be further combined with a Automator watched folder that detects when new PDFs have been added and proceeds to send them to print and then moves them to another folder.]
+CHANGED  JS      TAGS      update TAGS.php to use the Canvas QR code generator as used in tags.html  
 -->
+
+
+<!-- LIST.PHP
+************************************ 
+CHANGED  design  LIST      Create GALLERY LIST output template for printing & downloading the files for the print based EXPO newspaper
+CHANGED  code    LIST      CODE Apply Downloader with rename; //Sample call (browser will try to save with new file name): (download.php?f=phptutorial.zip&fc=php123tutorial.zip) There is a slight situation here, where the file needs to be renamed yet maintain the file extension. Never mind, this has been done and the download re-added te extension at the end.
+-->
+
+<!-- 
+TODO     code    HTACCESS  Create modRewrites to create the URL pretty links for QR codes and Facebook likes {*ala* `expo/gallery#01` *perhaps*}
+TODO     code    FORM      Add cookie to submission form to 'remember' previous selections
+TODO     code    FORM      The CLASIFICACIÓN list should only show the available list items that a specific MATERIA might allow. In fact if it can remain hidden until a MATERIA has been selected, all the better. We need to build this functionality.
+TODO     code    FORM      Allow user to include links to videos uploaded on Vimeo or YouTube
+TODO     doc.    FORM      create some good documentation with “best practices” tips on what kind of files to upload, titles to write, specs to include.
+TODO     code    FORM      Add project description field, perhaps it can replace the comments
+1/2      code    FORM      Add possibility for a brief project description and/or file {image/video/mp3} captions
+DONE     code    Database  If user uploads files but doesn’t fill out form, then delete unlinked files (DONE Notes: This has been attached to check for ‘empty obras’ and possibly can be set as a Cron job for deleting every three days)
+DONE     code    Database  Fix database so we can clean out empty obras {return ARCHIVO ID, send ARCHIVO array}
+* TODO     code    UPLOADS   Create GALLERY-friendly versions of uploads. Add image resizing function '278px' for iPhone 3Gs version [320px width minus 20px margin minus 1px border = 278px], '598px' for iPhone4, and '920px' for larger screens.
+-->
+<!-- GALLERY.PHP (v0.1)
+************************************ 
+TODO     code    GALLERY   or UPLOAD interpret YOUTUBE or VIMEO URLS and/or EMBED code and switch it to iframe embed code
+1/2      code    GALLERY   Automatically detect screen width resizing and adjust the videos’ width or run the script automatically.
+TODO     code    GALLERY   create a declaration which specifies which documents to display in gallery [images, video & audio], which to omit [native files, ie. Adobe, MS Office, Apple, TXT, RTF], which to include as a link for viewing [like in an issuu.com player, ie. PDF, PPT, DOC] & which to include as a link for downloading.
+TODO     code    GALLERY   implement MP3/HTML5video players with Flash fallback
+TODO     design  GALLERY   create some sample projects: audio, text, powerpoint, illustration, design
+TODO     code    GALLERY   Add Facebook Like /Twitter Tweet buttons
+TODO     code    GALLERY   Add loading masks for Carousel DIVs that might still be loading
+TODO     code    GALLERY   Add finger swiping (for touch devices) and left/right arrow keyboard navigation to advance carousel
+TODO     design  GALLERY   Create nice UI & instructions/legend for finger gesture (swiping) and/or keyboard control
+TODO     code    GALLERY   Add a parameters page on the gallery [perhaps an initial page] where a user can select to view a specific collection of OBRAS by COLECCIÓN, MATERIA or ARTIST
+TODO     code    FORM      Enable/disable the save button depending on the status of the uploads
+CHANGED  design  GALLERY   create a flexible layout for the gallery using <img src="http://placehold.it/10x10" width="10" height="10" alt="" /> and ethanmarcotte’s <meta name="viewport" content="width=device-width, initial-scale=1.0" /> and device-width-adjustable stylesheet 
+TODO     code    GALLERY   create an option that will allow the user to select various ‘gallery item width’ sizes, such as S, M, L (360px, 720px, 920px) for example, and save a cookie for that setting, regardless of URL schema and lightbox functionality
+TODO     C&D     GALLERY   create an HD gallery option, that only shows up for certain pieces, where the experience has been customized especially for that size (1920 x 1080)
+-->
+
+<!-- GALLERY/ (v0.2) 
+************************************ 
+TODO     code   GALLERY    Add MySQL functionality
+TODO     code   GALLERY    Implement SLIR method
+-->
+
+<!-- UPLOAD.PHP
+************************************ -->
+
+
+TODO     code    UPLOAD    Limit Camera RAW filetypes {DNG,CR2,NEF,etc} Images must be high-quality JPEGs, GIFs, PNGs.
+
+
+
 ##Questions for gabriel:
   DONE  * Is there a way to eliminate the htmlentities() wraps, and use another method for encoding mysql variables instead?
 
@@ -52,6 +76,10 @@
   * File downloader - Gabriel Trista/Robert Valencia, modified from File Download 1.3 (http://www.zubrag.com/scripts/)
   * SoundManager 2 / 360° MP3 Player - Scott Schiller (http://schillmania.com)
   
+  for facebook style autocomplete in form
+  * TextboxList + Autocomplete (uses MooTools) - Copyright: Guillermo Rauch <http://devthought.com/> - Distributed under MIT (http://devthought.com/2008/01/12/textboxlist-meets-autocompletion/)
+  * TextboxList (for jQuery) by golive - https://github.com/golive/TextboxList/
+  
   * YouTube iframe embed - (http://apiblog.youtube.com/2010/07/new-way-to-embed-youtube-videos.html)
   * Vimeo iframe embed - (http://vimeo.com/blog:391 & http://vimeo.com/api)
 
@@ -68,7 +96,7 @@
   * Moovie (http://colinaarts.com/code/moovie/)
   
   Image resizers:
-  * Smart Image Resizer - Joe Lencioni (http://shiftingpixel.com/2008/03/03/smart-image-resizer/)
+  * Smart Lencioni Image Resizer - Joe Lencioni (http://shiftingpixel.com/2008/03/03/smart-image-resizer/) <joe@shiftingpixel.com)>
   
   MORE LINKS used and/or referenced may be found at (http://rober.tv/expoproyecto)
   
